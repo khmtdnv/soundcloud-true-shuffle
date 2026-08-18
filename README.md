@@ -1,7 +1,7 @@
-# 🎵 SoundCloud Full Shuffle Fixer
+# 🎵 SoundCloud True Shuffle
 
 <p align="center">
-  <img src="icons/icon128.png" width="96" alt="SoundCloud Full Shuffle Fixer Logo" />
+  <img src="icons/icon128.png" width="96" alt="SoundCloud True Shuffle Logo" />
 </p>
 
 <p align="center">
@@ -25,7 +25,7 @@
 ---
 
 ## ⚡ Как расширение решает проблему
-**SoundCloud Full Shuffle Fixer** аккуратно перехватывает нажатие на стандартную кнопку Shuffle:
+**SoundCloud True Shuffle** аккуратно перехватывает нажатие на стандартную кнопку Shuffle:
 1. Открывает панель очереди в фоне.
 2. Плавно прокручивает список до самого конца, заставляя SoundCloud подгрузить **все треки**.
 3. Автоматически справляется со сбоями сети и повторяет запросы, если сервер SoundCloud подвис.
@@ -36,7 +36,7 @@
 
 ## 🚀 Установка (за 10 секунд)
 
-1. Скачайте готовый архив **[`sc-scroller.zip`](https://github.com/khmtdnv/sc-scroller/releases/latest)** из раздела [Релизы (Releases)](https://github.com/khmtdnv/sc-scroller/releases) и распакуйте его в любую папку.
+1. Скачайте готовый архив **[`soundcloud-true-shuffle.zip`](https://github.com/khmtdnv/soundcloud-true-shuffle/releases/latest)** из раздела [Релизы (Releases)](https://github.com/khmtdnv/soundcloud-true-shuffle/releases) и распакуйте его в любую папку.
 2. Откройте вкладку расширений в вашем браузере:
    - **Chrome / Brave**: `chrome://extensions`
    - **Edge**: `edge://extensions`
