@@ -1,0 +1,7 @@
+*.log
+.DS_Store
+scratch/
+1.txt
+diagnostic.js
+investigate.js
+.system_generated/
