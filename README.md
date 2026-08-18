@@ -1,7 +1,7 @@
 # 🎵 SoundCloud True Shuffle
 
 <p align="center">
-  <img src="icons/icon128.png" width="96" alt="SoundCloud True Shuffle Logo" />
+  <img src="icons/logo.png" width="128" alt="SoundCloud True Shuffle Logo" />
 </p>
 
 <p align="center">
