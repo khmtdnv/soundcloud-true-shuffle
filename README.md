@@ -5,69 +5,74 @@
 </p>
 
 <p align="center">
-  <b>Chrome / Brave / Edge extension that fixes SoundCloud's broken shuffle button by fully loading entire playlists and Likes (1500+ tracks) before shuffling.</b>
+  <b>Браузерное расширение для Chrome, Edge, Brave и Яндекс Браузера, которое исправляет баг перемешивания в SoundCloud: автоматически загружает весь плейлист и лайки (даже 1500+ треков) перед тем, как перемешать.</b>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Manifest-V3-orange?style=flat-square" alt="Manifest V3" />
-  <img src="https://img.shields.io/badge/Browser-Chrome%20%7C%20Edge%20%7C%20Brave%20%7C%20Yandex-blue?style=flat-square" alt="Compatible Browsers" />
-  <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="MIT License" />
+  <img src="https://img.shields.io/badge/Версия-1.0.0-orange?style=flat-square" alt="Версия 1.0.0" />
+  <img src="https://img.shields.io/badge/Манифест-V3-blue?style=flat-square" alt="Manifest V3" />
+  <img src="https://img.shields.io/badge/Браузеры-Chrome%20%7C%20Edge%20%7C%20Brave%20%7C%20Yandex-blueviolet?style=flat-square" alt="Совместимые браузеры" />
+  <img src="https://img.shields.io/badge/Лицензия-MIT-green?style=flat-square" alt="Лицензия MIT" />
 </p>
 
 ---
 
-## 🧐 The Problem
-By default, SoundCloud only loads the first **10–25 tracks** into the player queue ("Next up"). When you click the **Shuffle** button, SoundCloud only shuffles those few initially loaded tracks. If you have a playlist or "Liked Tracks" with **500, 1000, or 2000+ tracks**, you will hear the exact same first batch of songs repeatedly, while the rest of your music library is never played.
+## 🧐 В чём проблема SoundCloud?
+По умолчанию SoundCloud загружает в плеер («Next up») только первые **10–25 треков**. Когда вы нажимаете кнопку **«Перемешать» (Shuffle)**, сайт перемешивает только этот маленький начальный кусочек. 
 
-## ⚡ The Solution
-**SoundCloud Full Shuffle Fixer** seamlessly intercepts the native Shuffle button:
-1. Opens the queue in the background.
-2. Smoothly scrolls and auto-loads **all tracks** via lazy-load triggers.
-3. Automatically handles network recovery and retry jiggles if SoundCloud's API stutters.
-4. Rewinds to the top and triggers the native SoundCloud shuffle on the **entire** track collection.
-5. Provides an instant **«⚡ Перемешать сейчас / Shuffle Now»** button in the notification toast if you wish to skip waiting and shuffle immediately.
+Если в вашем плейлисте или «Понравившихся» (Likes) собрано **300, 1000 или 2000 треков**, вы будете бесконечно слушать одни и те же первые песни по кругу, а большая часть вашей медиатеки никогда не заиграет.
 
 ---
 
-## 🚀 Установка / Installation
+## ⚡ Как расширение решает проблему
+**SoundCloud Full Shuffle Fixer** аккуратно перехватывает нажатие на стандартную кнопку Shuffle:
+1. Открывает панель очереди в фоне.
+2. Плавно прокручивает список до самого конца, заставляя SoundCloud подгрузить **все треки**.
+3. Автоматически справляется со сбоями сети и повторяет запросы, если сервер SoundCloud подвис.
+4. Возвращает список в начало и запускает перемешивание по **абсолютно всем трекам** медиатеки.
+5. Добавляет кнопку **«⚡ Перемешать сейчас»** во всплывающее уведомление, чтобы вы могли в любой момент остановить прокрутку и сразу слушать музыку.
 
-### Способ 1: Установка распакованного расширения (10 секунд)
-1. Скачайте репозиторий (кнопка **Code → Download ZIP**) и распакуйте архив в любую удобную папку.
-2. Откройте страницу расширений в вашем браузере:
+---
+
+## 🚀 Установка (за 10 секунд)
+
+1. Скачайте готовый архив **[`sc-scroller.zip`](https://github.com/khmtdnv/sc-scroller/releases/latest)** из раздела [Релизы (Releases)](https://github.com/khmtdnv/sc-scroller/releases) и распакуйте его в любую папку.
+2. Откройте вкладку расширений в вашем браузере:
    - **Chrome / Brave**: `chrome://extensions`
    - **Edge**: `edge://extensions`
-   - **Yandex Browser**: `browser://extensions`
-3. В правом верхнем углу включите переключатель **«Режим разработчика» (Developer mode)**.
-4. Нажмите кнопку **«Загрузить распакованное расширение» (Load unpacked)** в левом верхнем углу.
-5. Выберите распакованную папку `sc-scroller`.
-6. Готово! Расширение установлено и активно.
+   - **Яндекс Браузер**: `browser://extensions`
+3. В правом верхнем углу включите переключатель **«Режим разработчика»**.
+4. Нажмите кнопку **«Загрузить распакованное расширение»** в левом верхнем углу.
+5. Выберите распакованную папку.
+6. Готово! Расширение установлено и сразу готово к работе.
 
 ---
 
-## 🎧 Как пользоваться / How to Use
+## 🎧 Как пользоваться
 
-1. Откройте [SoundCloud](https://soundcloud.com/) и включите любой длинный плейлист или страницу **«Понравившиеся треки» (Likes)**.
-2. Нажмите на стандартную кнопку **Перемешать (Shuffle)** в нижнем плеере.
-3. В правом нижнем углу появится плавающее уведомление со статусом загрузки (`Загрузка (~850)...`).
-4. Когда все треки загрузятся, плеер автоматически перемешает **весь** список!
-   > 💡 *Совет:* Вы можете нажать кнопку **«⚡ Перемешать сейчас»** прямо в уведомлении в любой момент, чтобы не ждать окончания фоновой загрузки.
+1. Откройте [SoundCloud](https://soundcloud.com/) и включите любой большой плейлист или страницу **«Понравившиеся треки» (Likes)**.
+2. Нажмите на обычную кнопку **Перемешать (Shuffle)** в нижнем плеере.
+3. В правом нижнем углу появится аккуратное уведомление со статусом подгрузки (например, `Загрузка (~1500)...`).
+4. Как только список прогрузится, SoundCloud начнет воспроизведение случайных треков из всей вашей коллекции!
+   > 💡 *Совет:* Вы можете нажать кнопку **«⚡ Перемешать сейчас»** прямо в уведомлении, если не хотите ждать полной прокрутки.
 
 ---
 
-## 📁 Структура проекта / Project Structure
+## 📁 Структура файлов
 
 ```
-├── manifest.json       # Chrome Extension Manifest V3
-├── content.js          # Основная логика перехвата и плавной подгрузки очереди
-├── styles.css          # Стили для всплывающего уведомления
+├── manifest.json       # Манифест расширения Chrome (Manifest V3)
+├── content.js          # Основной скрипт плавной подгрузки и перемешивания
+├── styles.css          # Стили всплывающего уведомления и кнопки
 ├── icons/              # Иконки расширения (16px, 48px, 128px)
-├── README.md           # Документация пользователя
-└── PUBLISHING.md       # Инструкция по загрузке в Chrome Web Store
+├── README.md           # Документация проекта
+└── PUBLISHING.md       # Руководство по публикации в Chrome Web Store
 ```
 
 ---
 
-## 📄 Лицензия / License
+## 📄 Лицензия
 
-Распространяется под лицензией [MIT](LICENSE). Свободно для использования, модификации и распространения.
+Проект распространяется под открытой лицензией [MIT](LICENSE). Бесплатно для использования, изменений и распространения.
+
 
